@@ -4,7 +4,7 @@ require 'net/http'
 require 'intercom'
 require 'dotenv/load'
 
-$intercom = Intercom::Client.new(token: ENV["TOKEN"])
+$intercom = Intercom::Client.new(token: ENV['TOKEN'])
 
 	$all_convos = $intercom.conversations.find_all(open: true).count
 	
