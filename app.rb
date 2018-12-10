@@ -14,6 +14,7 @@ ngrok = "https://701f3832.ngrok.io"
 
 get '/' do
 	p "Hi! #{$all_convos}"
+	p ENV['TOKEN']
 end
 
 	post'/submit' do
