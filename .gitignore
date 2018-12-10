@@ -12,6 +12,8 @@
 
 # Used by dotenv library to load environment variables.
 .env
+# ngrok = "https://701f3832.ngrok.io"
+
 
 ## Specific to RubyMotion:
 .dat*
