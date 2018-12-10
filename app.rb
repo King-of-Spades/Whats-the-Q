@@ -13,7 +13,7 @@ ngrok = "https://701f3832.ngrok.io"
 
 
 get '/' do
-	
+	p "Hi! #{$all_convos}"
 end
 
 	post'/submit' do
