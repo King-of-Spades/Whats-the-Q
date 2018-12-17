@@ -14,6 +14,8 @@ p $all_convos
 # end
 
 post '/' do
+	  content_type 'application/json'
+
 	text = "{\"canvas\":{\"content_url\":\"https://frozen-badlands-35106.herokuapp.com/live_canvas\"}}"
  	text.to_json
 	text
