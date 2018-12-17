@@ -10,7 +10,7 @@ $intercom = Intercom::Client.new(token: ENV['TOKEN'])
 $all_convos = $intercom.counts.for_type(type: 'conversation').conversation["open"]
 p $all_convos
 
-$time = Time.now.getutc
+$time = Time.now.strftime("%H:%M")
 
 get '/' do
 	p "Hi! #{$all_convos}"
