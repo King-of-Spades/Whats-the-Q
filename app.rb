@@ -4,9 +4,8 @@ require 'net/http'
 require 'intercom'
 require 'dotenv/load'
 
-# https://9a6d8a02.ngrok.io
 
-$intercom = Intercom::Client.new(token: ENV['TOKEN'])
+$intercom = Intercom::Client.new(token: ENV['ON-CALL-TOKEN'])
 $all_convos = $intercom.counts.for_type(type: 'conversation').conversation["open"]
 p $all_convos
 
