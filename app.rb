@@ -13,16 +13,16 @@ p $all_convos
 # 	p "Hi! #{$all_convos}"
 # end
 
+# post '/' do
+# 	  content_type 'application/json'
+
+# 	text = "{\"canvas\":{\"content_url\":\"https://frozen-badlands-35106.herokuapp.com/live_canvas\"}}"
+#  	text.to_json
+# 	text
+# end
+
 post '/' do
-	  content_type 'application/json'
-
-	text = "{\"canvas\":{\"content_url\":\"https://frozen-badlands-35106.herokuapp.com/live_canvas\"}}"
- 	text.to_json
-	text
-end
-
-post '/live_canvas' do
-  content_type 'application/json'
+  # content_type 'application/json'
 		
 $all_convos = $intercom.counts.for_type(type: 'conversation').conversation["open"]
 
