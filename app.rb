@@ -10,6 +10,8 @@ $intercom = Intercom::Client.new(token: ENV['TOKEN'])
 $all_convos = $intercom.counts.for_type(type: 'conversation').conversation["open"]
 p $all_convos
 
+
+
 get '/' do
 	p "Hi! #{$all_convos}"
 end
@@ -30,15 +32,7 @@ post '/live_canvas' do
  	text.to_json
 	text
 
-	post '/submit' do
-		content_type 'application/json'
-		
-    $all_convos = $intercom.counts.for_type(type: 'conversation').conversation["open"]
 
-		text = "{\"content\":{\"components\":[{\"id\":\"81e44d7877d568cdb57883b1fa20\",\"type\":\"button\",\"label\":\"Refresh \",\"style\":\"primary\",\"action\":{\"type\":\"submit\",\"url\":null},\"bottom_margin\":false}]}}"
-		text.to_json
-		text
-	end
 end
  
  
