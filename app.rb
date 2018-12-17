@@ -28,8 +28,8 @@ post '/live_canvas' do
   $all_convos = $intercom.counts.for_type(type: 'conversation').conversation["open"]
 
 
-	text = "{\"content\":{\"components\":[{\"id\":\"ab1c31592d25779a24e25b2e97b4\",\"type\":\"text\",\"text\":\"There are currently *#{$all_convos}* ongoing conversations.
-	Updated at: #{$time}.\",\"style\":\"header\",\"align\":\"left\",\"bottom_margin\":false}]}}"
+	text = "{\"content\":{\"components\":[{\"id\":\"ab1c31592d25779a24e25b2e97b4\",\"type\":\"text\",\"text\":\"Current ongoing conversations: *#{$all_convos}*\\n
+	Updated at: *#{$time}*\",\"style\":\"header\",\"align\":\"left\",\"bottom_margin\":false}]}}"
  	text.to_json
 	text
 
