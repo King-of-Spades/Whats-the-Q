@@ -34,7 +34,7 @@ post '/live_canvas' do
   end
   if $all_convos >= 10
   	$response = "Current ongoing conversations: *#{$all_convos}*\\n
-  	Response time might be longer that usual 😅! \\n
+  	Response time might be a bit longer 😅\\n
 	Updated at: *#{$time}* *#{$zone}*"
 end
 
