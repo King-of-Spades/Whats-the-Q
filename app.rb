@@ -9,15 +9,14 @@ $intercom = Intercom::Client.new(token: ENV['TOKEN'])
 $all_convos = $intercom.counts.for_type(type: 'conversation').conversation["open"]
 p $all_convos
 
-get '/' do
-	p "Hi! #{$all_convos}"
-end
+# get '/' do
+# 	p "Hi! #{$all_convos}"
+# end
 
 post '/' do
 	text = "{\"canvas\":{\"content_url\":\"https://frozen-badlands-35106.herokuapp.com/live_canvas\",\"stored_data\":{}}}"
  	text.to_json
 	text
-	p text
 end
 
 post '/live_canvas' do
