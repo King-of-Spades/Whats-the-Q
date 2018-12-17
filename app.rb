@@ -5,7 +5,7 @@ require 'intercom'
 require 'dotenv/load'
 
 
-$intercom = Intercom::Client.new(token: ENV['ON-CALL-TOKEN'])
+$intercom = Intercom::Client.new(token: ENV['TOKEN'])
 $all_convos = $intercom.counts.for_type(type: 'conversation').conversation["open"]
 p $all_convos
 
