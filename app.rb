@@ -8,7 +8,6 @@ $intercom = Intercom::Client.new(token: ENV['TOKEN'])
 $zone = Time.now.getlocal.zone
 
 get '/' do
-
 end
 
 post '/' do
