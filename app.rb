@@ -4,7 +4,7 @@ require 'net/http'
 require 'intercom'
 require 'dotenv/load'
 
-$intercom = Intercom::Client.new(token: ENV['TOKEN'])
+$intercom = Intercom::Client.new(token: ENV['ON-CALL-TOKEN'])
 $zone = Time.now.getlocal.zone
 
 get '/' do
